@@ -4,19 +4,19 @@
 
 Built for learning GenAI/RAG concepts in industrial automation context. This is a complete, runnable prototype that demonstrates production-ready patterns while remaining educational and extensible.
 
-## 🎯 Features
+##  Features
 
-### 📖 Document Q&A (RAG with Citations)
+###  Document Q&A (RAG with Citations)
 - **Input**: Questions about technical PDFs/manuals/SOPs
 - **Output**: Grounded answers with bullet citations [title, page, score]
 - **Behavior**: Returns "I don't know" for low-confidence retrieval, never hallucinates
 
-### 🚨 Alarm/Process Explainer  
+###  Alarm/Process Explainer  
 - **Input**: Process tag and time window over alarm CSV data
 - **Output**: Data summary (trends, thresholds) + procedural guidance with citations
 - **Behavior**: Combines quantitative analysis with document-based procedures
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.11+
@@ -82,7 +82,7 @@ docker build -t process-copilot-mini .
 docker run -p 8000:8000 process-copilot-mini
 ```
 
-## 📊 API Endpoints
+##  API Endpoints
 
 ### `GET /health`
 Health check endpoint
@@ -128,7 +128,7 @@ Response:
 }
 ```
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 process-copilot-mini/
@@ -178,7 +178,7 @@ API_PORT=8000
 LOG_LEVEL=INFO
 ```
 
-## 📚 Adding Your Own Documents
+##  Adding Your Own Documents
 
 1. **Add PDFs**: Place technical manuals in `data/pdfs/`
 2. **Rebuild Index**: Run `python -m src.index` 
@@ -186,7 +186,7 @@ LOG_LEVEL=INFO
 
 **Supported formats**: PDF files with extractable text (not scanned images)
 
-## 🧪 Example Queries
+##  Example Queries
 
 **Document Q&A**:
 - "What is the normal operating temperature range?"
@@ -198,7 +198,7 @@ LOG_LEVEL=INFO
 - Tag: `Temp_101`, Time: `2024-08-20 15:30:00` to `2024-08-20 16:30:00`
 - Tag: `Pressure_202`, Time: `2024-08-20 15:00:00` to `2024-08-20 16:00:00`
 
-## 🧠 How It Works
+##  How It Works
 
 ### RAG Pipeline
 1. **Ingestion**: PDFs → text extraction → chunking with metadata
@@ -214,7 +214,7 @@ LOG_LEVEL=INFO
 4. **Guidance**: Query documents for relevant procedures using RAG
 5. **Combination**: Merge data insights with procedural recommendations
 
-## 🚦 Technical Choices Explained
+##  Technical Choices Explained
 
 ### **Why FAISS?**
 - Fast similarity search for production scale
@@ -239,7 +239,7 @@ LOG_LEVEL=INFO
 - Maintains user trust through honest "I don't know" responses
 - Critical for industrial safety applications
 
-## 🔄 Extension Ideas
+##  Extension Ideas
 
 ### **Immediate Improvements**:
 - Replace template generation with OpenAI API or local LLM
@@ -259,7 +259,7 @@ LOG_LEVEL=INFO
 - Monitoring and observability
 - A/B testing for different retrieval strategies
 
-## 🧪 Testing
+##  Testing
 
 ```bash
 # Run individual modules
@@ -275,7 +275,7 @@ python -m pytest tests/
 curl http://localhost:8000/health
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 **"No index available"**: Run `python -m src.index` to build vector index
 
@@ -287,7 +287,7 @@ curl http://localhost:8000/health
 
 **API connection failed**: Ensure FastAPI server is running on correct port
 
-## 📖 Learning Path (Reverse Engineering Guide)
+##  Learning Path (Reverse Engineering Guide)
 
 **Recommended reading order for understanding**:
 
@@ -307,7 +307,7 @@ curl http://localhost:8000/health
 5. Template generates answer with citations (`rag.py`)
 6. Response returned through API to UI
 
-## 💡 Interview Talking Points
+## Summary Points
 
 **Technical Depth**:
 - "I implemented semantic chunking to preserve context across document boundaries"
