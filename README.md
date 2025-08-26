@@ -158,7 +158,7 @@ process-copilot-mini/
     └── test_alarms.py   # Alarm analysis tests
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 Key environment variables in `.env`:
 
@@ -327,7 +327,7 @@ curl http://localhost:8000/health
 - "Designed RESTful APIs for easy integration with existing industrial systems"
 - "Added health checks and monitoring endpoints for operational visibility"
 
-## 🤝 Contributing
+##  Contributing
 
 This is an educational project. Feel free to:
 - Add more sophisticated PDF processing
@@ -336,7 +336,7 @@ This is an educational project. Feel free to:
 - Improve the UI/UX
 - Add comprehensive tests
 
-## 📄 License
+##  License
 
 Educational use only. Not for production industrial systems without proper validation.
 
